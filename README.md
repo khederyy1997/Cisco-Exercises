@@ -1,0 +1,3 @@
+fisrt exercise : This exercise includes getting familiar with the Packet Tracer environment and devices like switches and routers. I have implemented a network where two PCs are connected to two servers in another location.
+second exercise : In this exercise, I have learned about the different types of cables, including UTP (both straight-through and crossover cables) and fiber optic cables. I have also learned about the transmitter and receiver pins in PCs, switches, routers, servers, and firewalls.
+third the fourth : These two exercises aimed to familiarize me with the OSI model. In the second exercise, I trained to configure some security configurations, such as setting up a password and a secret for a router and a switch.
