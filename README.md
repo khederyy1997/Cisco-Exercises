@@ -10,6 +10,7 @@ In this exercise, I got familiar with the Packet Tracer environment and devices 
 ### 2. Second Exercise  
 I learned about different types of network cables, including UTP (both straight-through and crossover) and fiber optic cables. Additionally, I studied the transmitter and receiver pins in PCs, switches, routers, servers, and firewalls.  
 
-### 3. Third & Fourth Exercises  
+### 3 & 4. Third & Fourth Exercises  
 These exercises focused on the OSI model. I configured security settings such as setting up passwords and secrets for routers and switches to enhance network security.  
-
+### 5 & 6. Exercises
+In this exercise, I have learned how the ping command works. I also learned how to access the MAC table on a switch and clear it.
