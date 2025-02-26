@@ -1,0 +1,79 @@
+
+first check all  ip adress for all interfaces 
+R1 : 
+
+show ip int br
+R2 :
+
+show ip int br
+
+R3 
+:
+show ip int br
+
+
+check all  ip routes :
+en
+show ip route 
+
+R1
+
+first misconfigrution 
+
+
+S    192.168.3.0/24 [1/0] via 192.168.12.3 
+
+to fix 
+
+en
+configure t 
+no ip route 192.168.3.0 255.255.255.0 192.168.12.3
+ip route 192.168.3.0 255.255.255.0 192.168.12.2
+do show ip route
+
+
+
+
+R2
+
+
+
+
+S    192.168.3.0/24 is directly connected, GigabitEthernet0/0
+
+to fix 
+
+en
+configure t 
+no ip route 192.168.3.0 255.255.255.0 GigabitEthernet0/0
+ip route 192.168.3.0 255.255.255.0 GigabitEthernet0/1
+do show ip route
+
+
+
+R3
+
+
+misconfigrutions 
+
+
+there is no static route to 192.168.1.0 
+
+GigabitEthernet0/0     192.168.13.3    YES manual up                    up 
+
+
+
+to fix 
+
+en
+configure t 
+int g0/0
+ip add 192.168.13.3 255.255.255.0 
+ip route 192.168.1.0 255.255.255.0 192.168.13.2
+
+
+
+test :
+
+P1 
+ping 192.168.3.1
