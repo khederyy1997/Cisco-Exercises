@@ -1,0 +1,78 @@
+P1 :
+
+gateway : 
+192.168.1.254
+ip : 192.168.1.1
+
+P2 :
+
+gateway : 
+192.168.3.254
+ip : 192.168.3.1
+
+first set up ip adress for all interfaces 
+R1 : 
+
+en
+configure t 
+hostname R1 
+int g0/1 
+ip address 192.168.1.254 255.255.255.0
+no shutdown 
+int g0/0 
+ip address 192.168.12.1 255.255.255.0
+no shutdown 
+R2 :
+
+en
+configure t 
+hostname R2
+int g0/0 
+ip address 192.168.12.2 255.255.255.0
+no shutdown 
+int g0/1 
+ip address 192.168.13.2 255.255.255.0
+no shutdown 
+do show ip int br
+
+R3 
+
+en
+configure t 
+hostname R3
+int g0/0 
+ip address 192.168.13.3 255.255.255.0
+no shutdown 
+int g0/1 
+ip address 192.168.3.254 255.255.255.0
+no shutdown 
+do show ip int br
+
+ Configure static routes on the routers to enable PC1 to successfully ping PC2.
+
+
+R1 :
+en
+configure t 
+ip route 192.168.3.0 255.255.255.0 192.168.12.2
+do show ip route
+
+R2 : 
+
+en
+configure t 
+ip route 192.168.3.0 255.255.255.0 192.168.13.3
+ip route 192.168.1.0 255.255.255.0 192.168.12.1
+do show ip route
+
+R3 
+en
+configure t 
+ip route 192.168.1.0 255.255.255.0 192.168.13.2
+do show ip route
+
+
+test :
+
+P1 
+ping 192.168.3.1
