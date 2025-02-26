@@ -21,3 +21,7 @@ In this exercise, I learned about IPv4 address classification, subnets, and assi
 
 ### 9. Exercises
 I learned how to manually configure the speed and duplex on interfaces connected to other networking devices (not end hosts). I also learned how to configure appropriate descriptions on each interface. Additionally, I learned the importance of disabling interfaces that are not connected to any device for security purposes.
+
+## 11.1 Exercises
+In this exercise, I configured the PCs and routers according to the network diagram (hostnames, IP addresses, etc.) and set up static routes on the routers to enable PC1 to successfully ping PC2.
+I uploaded a text file of all used instructions 
