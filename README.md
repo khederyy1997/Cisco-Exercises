@@ -25,3 +25,6 @@ I learned how to manually configure the speed and duplex on interfaces connected
 ## 11.1 Exercises
 In this exercise, I configured the PCs and routers according to the network diagram (hostnames, IP addresses, etc.) and set up static routes on the routers to enable PC1 to successfully ping PC2.
 I uploaded a text file of all used instructions 
+
+## 11.2 Exercises
+In this exercise, I learned how to find misconfigurations in a router. First, we need to check the IP addresses of the ports and then check the static routes
