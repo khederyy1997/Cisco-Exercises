@@ -28,3 +28,10 @@ I uploaded a text file of all used instructions
 
 ## 11.2 Exercises
 In this exercise, I learned how to find misconfigurations in a router. First, we need to check the IP addresses of the ports and then check the static routes
+
+## 15 Exercises
+I learned how to subnet the 192.168.5.0/24 network to provide sufficient addressing for each LAN, including the point-to-point connection between R1 and R2.
+
+I assigned the first usable address to the PC in each LAN and the last usable address to the router's interface in each LAN.
+
+I also configured static routes on each router so that all PCs can successfully ping each other.
