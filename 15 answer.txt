@@ -1,0 +1,125 @@
+In this exercise, we are following the VLSM method.
+
+LAN 2:
+
+Network ID: 192.168.5.0/25
+PC1 IP Address: 192.168.5.1/25 (Subnet Mask: 255.255.255.128)
+Router Interface (g0/1): 192.168.5.126/25 (Subnet Mask: 255.255.255.128)
+Configuration:
+For the PC, we should manually add the configuration.
+
+Router Configuration:
+bash
+Copy
+Edit
+en  
+config t  
+interface g0/1  
+ip address 192.168.5.126 255.255.255.128  
+no shutdown  
+exit  
+
+
+LAN 1:
+
+Network ID: 192.168.5.128/26
+PC1 IP Address: 192.168.5.129/26 (Subnet Mask: 255.255.255.192)
+Router Interface (g0/0): 192.168.5.190/25 (Subnet Mask: 255.255.255.192)
+Configuration:
+For the PC, we should manually add the configuration.
+
+Router Configuration:
+bash
+Copy
+Edit
+en  
+config t  
+interface g0/0  
+ip address 192.168.5.190 255.255.255.192  
+no shutdown  
+exit  
+
+
+
+LAN 3:
+
+Network ID: 192.168.5.192/28
+PC1 IP Address: 192.168.5.193/28 (Subnet Mask: 255.255.255.240)
+Router Interface (g0/0): 192.168.5.206/28 (Subnet Mask: 255.255.255.240)
+Configuration:
+For the PC, we should manually add the configuration.
+
+Router Configuration:
+bash
+Copy
+Edit
+en  
+config t  
+interface g0/0  
+ip address 192.168.5.206 255.255.255.240
+no shutdown  
+exit  
+
+
+
+LAN 4:
+
+Network ID: 192.168.5.208/28
+PC1 IP Address: 192.168.5.209/28 (Subnet Mask: 255.255.255.240)
+Router Interface (g0/1): 192.168.5.222/28 (Subnet Mask: 255.255.255.240)
+Configuration:
+For the PC, we should manually add the configuration.
+
+Router Configuration:
+bash
+Copy
+Edit
+en  
+config t  
+interface g0/1  
+ip address 192.168.5.222 255.255.255.240
+no shutdown  
+exit  
+
+
+point to point connection :
+Network ID: 192.168.5.224/30 (Subnet Mask: 255.255.255.252)
+R1  :
+
+en  
+config t  
+interface g0/0/0  
+ip address 192.168.5.225 255.255.255.252
+no shutdown  
+exit  
+
+R2  :
+
+en  
+config t  
+interface g0/0/0  
+ip address 192.168.5.226 255.255.255.252
+no shutdown  
+exit  
+
+
+adding statics routes:
+
+R2:
+
+en
+config t
+ip route 192.168.5.0 255.255.255.128 g0/0/0
+ip route 192.168.5.128 255.255.255.192 g0/0/0
+
+
+R1:
+
+en
+config t
+ip route 192.168.5.192 255.255.255.240 g0/0/0
+ip route 192.168.5.208 255.255.255.240 g0/0/0
+
+
+
+ 
